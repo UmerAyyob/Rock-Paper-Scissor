@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+
+<body class="text-center text-white bg-gray-600 ">
+    <div class="mt-4 space-y-5">
+        <h1 class="text-3xl">Select Your Move:</h1>
+        <button class="border bg-yellow-200 p-2 border-black rounded-[40%] mr-3 js-rock-button">
+            <img class="emoji-image h-32" src="./img/rock-emoji.png" alt="" srcset="">
+        </button>
+
+        <button class="border bg-yellow-200 p-2 border-black rounded-[40%] mr-3 js-paper-button">
+            <img class="emoji-image h-32" src="./img/paper-emoji.png" alt="" srcset="">
+        </button>
+
+        <button class="border  bg-yellow-200 p-2 border-black rounded-[40%] js-scissors-button">
+            <img class="emoji-image h-32" src="./img/scissors-emoji.png" alt="" srcset="">
+        </button>
+        <p class="text-4xl js-result text-bold"></p>
+        <p class="moves">
+        </p>
+        <p class="js-score"></p>
+        <button class="p-2 border border-black hover:scale-110 bg-yellow-200 hover:bg-yellow-400 text-black font-bold"
+            onclick="
+        score.win = 0;
+        score.lose = 0;
+        score.tie = 0;
+        localStorage.removeItem('score');
+        updateScore();
+    ">
+            Reset Score
+        </button>
+        <button
+            class="p-2 border border-black autoPlay hover:scale-110 bg-yellow-200 hover:bg-yellow-400 text-black font-bold">
+            Auto Play
+        </button>
+    </div>
+</body>
+
+<script src="script.js"></script>
+
+</html>
